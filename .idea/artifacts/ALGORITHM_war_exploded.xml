@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="ALGORITHM:war exploded">
-    <output-path>$PROJECT_DIR$/LinkedStack/target/algorithm-0.0.1</output-path>
+  <artifact type="exploded-war" name="algorithm:war exploded">
+    <output-path>$PROJECT_DIR$/ALGORITHM/target/algorithm-0.0.1</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>ALGORITHM</module>
+        <module>algorithm</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ALGORITHM" />
+          <element id="module-output" name="algorithm" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.7.RELEASE" />
@@ -46,7 +46,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/ALGORITHM/target/algorithm-0.0.1/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="ALGORITHM/web/Web" />
+      <element id="javaee-facet-resources" facet="algorithm/web/Web" />
     </root>
   </artifact>
 </component>

@@ -12,6 +12,7 @@
       <list>
         <option value="$PROJECT_DIR$/JUC/pom.xml" />
         <option value="$PROJECT_DIR$/LinkedStack/pom.xml" />
+        <option value="$PROJECT_DIR$/ALGORITHM/pom.xml" />
       </list>
     </option>
   </component>
