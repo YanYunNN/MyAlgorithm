@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ALGORITHM:war">
+    <output-path>$PROJECT_DIR$/LinkedStack/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ALGORITHM</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="algorithm-0.0.1.war">
+      <element id="artifact" artifact-name="ALGORITHM:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="linkedList:war">
+    <output-path>$PROJECT_DIR$/LinkedStack/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>linkedList</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="linkedList-0.0.1.war">
+      <element id="artifact" artifact-name="linkedList:war exploded" />
+    </root>
+  </artifact>
+</component>
