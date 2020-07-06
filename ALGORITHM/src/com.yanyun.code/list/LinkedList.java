@@ -1,4 +1,4 @@
-package com.yanyun.code;
+package com.yanyun.code.list;
 
 /**
  * 链表结构

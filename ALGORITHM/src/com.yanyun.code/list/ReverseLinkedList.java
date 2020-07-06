@@ -1,4 +1,6 @@
-package com.yanyun.code;
+package com.yanyun.code.list;
+
+import com.yanyun.code.list.LinkedList;
 
 /**
  * 链表反转

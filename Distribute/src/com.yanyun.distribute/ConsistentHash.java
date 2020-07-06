@@ -57,7 +57,7 @@ public class ConsistentHash<T> {
             return null;
         }
         // node 用String来表示,获得node在哈希环中的hashCode
-        int hash = key.hashCode();
+        int hash = key.hashCode() % circle.size();
         System.out.println("hashcode----->:" + hash);
         //数据映射在两台虚拟机器所在环之间,就需要按顺时针方向寻找机器
         if (!circle.containsKey(hash)) {
