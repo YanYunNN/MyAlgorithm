@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Distribute:war">
+    <output-path>$PROJECT_DIR$/Distribute/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Distribute</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="distribute-0.0.1.war">
+      <element id="artifact" artifact-name="Distribute:war exploded" />
+    </root>
+  </artifact>
+</component>

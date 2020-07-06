@@ -19,6 +19,7 @@ public class Pipeline {
 
         try {
             jedis = jedisPool.getResource();
+            jedis.auth("123456");
 
             //no pipeline no transaction
             noPipelineNoTransaction(jedis, COUNT);

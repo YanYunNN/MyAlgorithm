@@ -9,17 +9,20 @@
         <outputRelativeToContentRoot value="true" />
         <module name="algorithm" />
         <module name="JUC" />
+        <module name="Distribute" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ALGORITHM" target="1.8" />
       <module name="algorithm" target="1.8" />
+      <module name="Distribute" target="1.8" />
       <module name="JUC" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ALGORITHM" options="-parameters" />
+      <module name="Distribute" options="-parameters" />
       <module name="JUC" options="-parameters" />
       <module name="algorithm" options="-parameters" />
     </option>

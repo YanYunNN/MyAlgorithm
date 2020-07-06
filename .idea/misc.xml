@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ALGORITHM" />
+    <file type="web" url="file://$PROJECT_DIR$/Distribute" />
     <file type="web" url="file://$PROJECT_DIR$/JUC" />
   </component>
   <component name="JavaScriptSettings">
@@ -10,9 +11,10 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/JUC/pom.xml" />
         <option value="$PROJECT_DIR$/LinkedStack/pom.xml" />
         <option value="$PROJECT_DIR$/ALGORITHM/pom.xml" />
+        <option value="$PROJECT_DIR$/Distribute/pom.xml" />
+        <option value="$PROJECT_DIR$/JUC/pom.xml" />
       </list>
     </option>
   </component>
