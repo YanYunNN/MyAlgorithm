@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Auther: xcai
- * @Date: 2020/07/06/20:06
+ * @Date: 2020/07/07/10:06
  * @Description:
  * @Version: 1.0
  */
@@ -12,7 +12,7 @@ public class SortDemo {
     public static void main(String[] args) {
 
 
-        System.out.println("【无序数组】-------");
+        System.out.println("【折半查找】-------");
         System.out.println(Arrays.toString(MyArray.array) + "\n");
 
         //冒泡排序
