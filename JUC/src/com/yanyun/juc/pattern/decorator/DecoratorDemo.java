@@ -1,5 +1,7 @@
 package com.yanyun.juc.pattern.decorator;
 
+import java.util.concurrent.*;
+
 /**
  * @Auther: xcai
  * @Date: 2020/07/03/13:05
@@ -26,6 +28,23 @@ public class DecoratorDemo {
         System.out.println("\nRectangle of red border");
         redRectangle.draw();
 
+        Callable task = () -> {
+            Thread.sleep(3000);
+            return 3;
+        };
+
+        System.out.println("start");
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        Future s = executorService.submit(task);
+        try {
+            System.out.println(s.isDone() + " " + s.get());
+            System.out.println(s.isDone() + " " + s.isCancelled());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        s.cancel(true);
+        System.out.println("over");
+        executorService.shutdownNow();
     }
 
 
