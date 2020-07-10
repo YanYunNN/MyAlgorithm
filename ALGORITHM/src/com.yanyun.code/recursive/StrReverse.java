@@ -1,6 +1,7 @@
 package com.yanyun.code.recursive;
 
-import javax.sound.midi.Soundbank;
+
+import io.netty.util.CharsetUtil;
 
 /**
  * @Auther: xcai
@@ -20,6 +21,9 @@ public class StrReverse {
         if (origin.equals(reverse)) {
             System.out.println("是回文！");
         }
+
+        String s = new String(origin.getBytes(CharsetUtil.ISO_8859_1), CharsetUtil.UTF_8);
+        System.out.println(s);
     }
 
     public static String reverse(String originStr) {
