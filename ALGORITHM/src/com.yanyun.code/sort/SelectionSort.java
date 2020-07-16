@@ -12,14 +12,11 @@ package com.yanyun.code.sort;
 public class SelectionSort {
     /**
      * 选择排序
-     * @param array
-     * @return
      */
     public static int sort(int[] array) {
         if (array == null || array.length <= 1) {
             return 0;
         }
-        int n = 0;
         //其他都排好了，最后一个不用排
         for (int i = 0; i < array.length - 1; i++) {
             //保存最小索引
@@ -30,12 +27,11 @@ public class SelectionSort {
                 if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
-                n++;
             }
             if (i != minIndex) {
                 MyArray.swap(array, i, minIndex);
             }
         }
-        return n;
+        return 0;
     }
 }

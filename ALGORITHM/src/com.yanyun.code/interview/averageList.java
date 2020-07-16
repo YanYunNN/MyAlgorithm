@@ -28,6 +28,9 @@ public class averageList<T> {
         System.out.println(lists1);
     }
 
+    /**
+     * 常规方法
+     */
     public List<List<T>> splitList(List<T> list, int n) {
         if (list == null || list.size() == 0 || n < 1) {
             return null;
@@ -44,6 +47,9 @@ public class averageList<T> {
         return result;
     }
 
+    /**
+     * 偏移量方法
+     */
     public static <T> List<List<T>> averageAssign(List<T> list, int n) {
         List<List<T>> result = new ArrayList<List<T>>();
         int remaider = list.size() % n;  //(先计算出余数)

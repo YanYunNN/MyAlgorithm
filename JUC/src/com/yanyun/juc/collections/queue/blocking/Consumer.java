@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * Created by patrick on 2016/12/29.
  */
-public class Consumer extends com.yanyun.juc.collections.queue.blocking.AbstractQueueEndPoint {
+public class Consumer extends AbstractQueueEndPoint {
     public Consumer(BlockingQueue<String> queue) {
         super(queue);
     }
