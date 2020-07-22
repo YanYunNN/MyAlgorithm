@@ -2,6 +2,7 @@ package com.yanyun.juc.pattern.singleton;
 
 /**
  * 单例双重校验锁
+ * DC+Lock
  */
 public class DCLSingleton {
     /**
@@ -24,14 +25,16 @@ public class DCLSingleton {
     /**
      * 双重检查：如果多个线程同时了通过了第一次检查，并且其中一个线程首先通过了第二次检查并实例化了对象，
      * 那么剩余通过了第一次检查的线程就不会再去实例化对象。
+     * <p>
+     * 方法不加锁
      */
-    public synchronized static DCLSingleton getInstance() {
+    public static DCLSingleton getInstance() {
         //检查变量是否被初始化
         // 线程A和线程B同时看到singleton = null，如果不为null，则直接返回singleton
         if (uniqueInstance == null) {
             // 线程A或线程B获得该锁进行初始化，加锁
             /**
-             * 加类锁作用：解决了频繁加锁性能低效：
+             * 加类锁作用：解决了方法频繁加锁性能低效：
              * 问题：每次去获取对象都需要先获取锁，并发性能非常地差，极端情况下，可能会出现卡顿现象
              * 结果：如果没有实例化对象则加锁创建，如果已经实例化了，则不需要加锁，直接获取实例
              */
