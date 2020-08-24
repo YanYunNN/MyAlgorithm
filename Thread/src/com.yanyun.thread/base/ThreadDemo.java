@@ -21,7 +21,7 @@ public class ThreadDemo {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main0(String[] args) {
         /**
          * Thread
          */
@@ -35,5 +35,17 @@ public class ThreadDemo {
         new Thread(new MyThread2()).start();
         new Thread(() -> System.out.println("java 8 匿名内部类")).start();
         System.out.println(Thread.currentThread().getName());
+    }
+
+    public static void main(String[] args) {
+        /**
+         * Thread
+         */
+        Thread myThread = new MyThread1();
+        System.out.println("MyThread1");
+        System.out.println(myThread.getState());
+        myThread.start();
+        System.out.println(myThread.getState());
+        myThread.start();
     }
 }
