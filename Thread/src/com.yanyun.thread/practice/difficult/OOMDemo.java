@@ -1,4 +1,4 @@
-package com.yanyun.thread.practice;
+package com.yanyun.thread.practice.difficult;
 
 import java.util.HashMap;
 import java.util.Map;

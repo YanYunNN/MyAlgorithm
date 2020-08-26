@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @date 2020/08/12/20:22
  * @description
  */
-public class VolatileExample {
+public class m {
     int a = 0;
     volatile boolean flag = false;
 

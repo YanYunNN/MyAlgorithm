@@ -24,7 +24,12 @@ public class Join {
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new ThreadA());
         thread.start();
+
+        //加了wait，非法状态异常
+        System.out.println(thread.getState());
         thread.wait();
+        System.out.println(thread.getState());
+
         thread.join();
         System.out.println("如果不加join方法，我会先被打出来，加了就不一样了");
     }
