@@ -1,5 +1,7 @@
 package com.yanyun.thread.thoery;
 
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+
 /**
  * @author xcai
  * @version 1.0
@@ -11,5 +13,6 @@ public class AQSDemo {
      /*   if (!tryAcquire(arg) && acquireQueued(addWaiter(AbstractQueuedSynchronizer.Node.EXCLUSIVE), arg)) {
             selfInterrupt();
         }*/
+//        AbstractQueuedSynchronizer
     }
 }
