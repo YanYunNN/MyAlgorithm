@@ -18,7 +18,7 @@ public class Visualvm {
     //声明缓存对象
     private static final Map map = new HashMap();
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             Thread.sleep(10000);//给打开visualvm时间
         } catch (InterruptedException e) {

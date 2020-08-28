@@ -9,8 +9,8 @@ import java.util.concurrent.ArrayBlockingQueue;
  * @description
  */
 public class Test {
-    private int queueSize = 10;
-    private ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(queueSize);
+    private final int queueSize = 10;
+    private final ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(queueSize);
 
     public static void main(String[] args) {
         Test test = new Test();

@@ -12,7 +12,7 @@ public class EagerSingleton {
      * <p>
      * 类在加载时会在堆内存中创建一个Singleton对象，当类被卸载时，Singleton对象也随之消亡了。
      */
-    private static EagerSingleton uniqueInstance = new EagerSingleton();
+    private static final EagerSingleton uniqueInstance = new EagerSingleton();
 
     private EagerSingleton() {
     }

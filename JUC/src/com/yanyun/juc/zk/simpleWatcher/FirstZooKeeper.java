@@ -17,7 +17,7 @@ import java.util.concurrent.CountDownLatch;
 public class FirstZooKeeper {
     private static final Logger LOGGER = LoggerFactory.getLogger(FirstZooKeeper.class);
 
-    private static Gson gson = new Gson();
+    private static final Gson gson = new Gson();
 
     public static void main(String[] args) throws IOException, KeeperException, InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(1);
@@ -227,7 +227,7 @@ public class FirstZooKeeper {
     }
 
     private static class CountDownWatcher implements Watcher {
-        private CountDownLatch countDownLatch;
+        private final CountDownLatch countDownLatch;
 
         public CountDownWatcher(CountDownLatch countDownLatch) {
             this.countDownLatch = countDownLatch;

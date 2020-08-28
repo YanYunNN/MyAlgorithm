@@ -113,7 +113,7 @@ public class SimpleLock {
 
     private static class CustomThread extends Thread {
         private final SimpleLock simpleLock;
-        private Info info;
+        private final Info info;
 
         public CustomThread(Info info, SimpleLock simpleLock) {
             this.info = info;

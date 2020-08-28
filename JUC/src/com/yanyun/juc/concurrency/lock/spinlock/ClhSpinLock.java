@@ -13,13 +13,13 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public class ClhSpinLock implements Operator {
     //前驱节点
-    private ThreadLocal<Node> prev = new ThreadLocal<>();
+    private final ThreadLocal<Node> prev = new ThreadLocal<>();
 
     //当前节点
-    private ThreadLocal<Node> current = new ThreadLocal<>();
+    private final ThreadLocal<Node> current = new ThreadLocal<>();
 
     //末尾节点
-    private AtomicReference<Node> tail = new AtomicReference<>();
+    private final AtomicReference<Node> tail = new AtomicReference<>();
 
     public static void main(String[] args) {
         ClhSpinLock clhLock = new ClhSpinLock();

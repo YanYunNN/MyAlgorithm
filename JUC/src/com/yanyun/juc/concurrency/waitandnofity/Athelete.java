@@ -28,8 +28,8 @@ public class Athelete {
 
     private static class Runner extends Thread {
         private final Object lock;
-        private SharedValue sharedValue;
-        private CountDownLatch countDownLatch;
+        private final SharedValue sharedValue;
+        private final CountDownLatch countDownLatch;
 
         public Runner(Object lock, SharedValue sharedValue, CountDownLatch cdl) {
             this.lock = lock;

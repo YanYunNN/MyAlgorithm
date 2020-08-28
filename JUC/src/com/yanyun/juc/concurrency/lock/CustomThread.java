@@ -19,7 +19,7 @@ public class CustomThread extends Thread {
         for (int i = 0; i < COUNT; i++) {
             operator.lock();
 
-            System.out.println(Thread.currentThread() + ": " + String.valueOf(value++));
+            System.out.println(Thread.currentThread() + ": " + value++);
 
             operator.unlock();
         }

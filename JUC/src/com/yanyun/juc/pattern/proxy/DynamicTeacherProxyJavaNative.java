@@ -18,7 +18,7 @@ public class DynamicTeacherProxyJavaNative {
     }
 
     private static class MyInvocationHandler implements InvocationHandler {
-        private Teacher teacher;
+        private final Teacher teacher;
 
         public MyInvocationHandler(Teacher teacher) {
             this.teacher = teacher;

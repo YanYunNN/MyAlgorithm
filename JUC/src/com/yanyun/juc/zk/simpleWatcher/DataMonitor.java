@@ -8,9 +8,9 @@ import org.apache.zookeeper.data.Stat;
  * Created by sunyiwei on 2016/7/21.
  */
 public class DataMonitor implements Watcher, AsyncCallback.StatCallback {
-    private String path;
-    private DataMonitorListener dataMonitorListener;
-    private ZooKeeper zooKeeper;
+    private final String path;
+    private final DataMonitorListener dataMonitorListener;
+    private final ZooKeeper zooKeeper;
     private volatile boolean dead;
 
     public DataMonitor(String path, DataMonitorListener dataMonitorListener, ZooKeeper zooKeeper) {

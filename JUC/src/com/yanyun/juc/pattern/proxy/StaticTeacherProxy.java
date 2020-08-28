@@ -6,7 +6,7 @@ package com.yanyun.juc.pattern.proxy;
  * Created by sunyiwei on 2016/10/19.
  */
 public class StaticTeacherProxy implements IPerson {
-    private Teacher teacher;
+    private final Teacher teacher;
 
     //静态代理类内部需维持一个委托类的实例
     public StaticTeacherProxy(Teacher teacher) {

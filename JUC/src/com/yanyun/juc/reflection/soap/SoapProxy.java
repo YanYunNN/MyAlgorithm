@@ -8,9 +8,9 @@ import java.lang.reflect.Proxy;
  * Created by sunyiwei on 2016/11/10.
  */
 public class SoapProxy implements InvocationHandler {
-    private String url;
-    private String serviceName;
-    private String encoding;
+    private final String url;
+    private final String serviceName;
+    private final String encoding;
 
     public SoapProxy(String url, String serviceName, String encoding) {
         this.url = url;

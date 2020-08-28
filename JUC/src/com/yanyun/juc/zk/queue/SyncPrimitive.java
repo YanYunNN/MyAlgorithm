@@ -16,7 +16,7 @@ public class SyncPrimitive implements Watcher {
 
     protected String root;
     protected String address;
-    private CountDownLatch countDownLatch = new CountDownLatch(1);
+    private final CountDownLatch countDownLatch = new CountDownLatch(1);
 
     public SyncPrimitive(String address, String root) {
         this.address = address;

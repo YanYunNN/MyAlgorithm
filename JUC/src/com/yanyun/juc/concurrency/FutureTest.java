@@ -18,7 +18,7 @@ public class FutureTest {
 
         List<Future<String>> fs = new ArrayList<>(COUNT);
         for (int i = 0; i < COUNT; i++) {
-            Future<String> f = executorService.submit((Callable<String>) () -> {
+            Future<String> f = executorService.submit(() -> {
                 Thread.sleep(rand());
 
                 return Thread.currentThread().getName() + ": I'm sleepy.";

@@ -12,7 +12,7 @@ import java.io.PipedWriter;
  */
 public class Pipe {
     static class ReaderThread implements Runnable {
-        private PipedReader reader;
+        private final PipedReader reader;
 
         public ReaderThread(PipedReader reader) {
             this.reader = reader;
@@ -34,7 +34,7 @@ public class Pipe {
 
     static class WriterThread implements Runnable {
 
-        private PipedWriter writer;
+        private final PipedWriter writer;
 
         public WriterThread(PipedWriter writer) {
             this.writer = writer;

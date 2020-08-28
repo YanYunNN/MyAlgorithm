@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * Created by sunyiwei on 2016/12/6.
  */
 public class SpinLock implements Operator {
-    private AtomicReference<Thread> current = new AtomicReference<>();
+    private final AtomicReference<Thread> current = new AtomicReference<>();
 
     public static void main(String[] args) {
         SpinLock spinLock = new SpinLock();

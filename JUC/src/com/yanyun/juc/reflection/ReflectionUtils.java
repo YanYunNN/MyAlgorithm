@@ -24,7 +24,7 @@ public class ReflectionUtils {
         }
 
         Field[] result = new Field[fields.size()];
-        return (Field[]) fields.toArray(result);
+        return fields.toArray(result);
     }
 
     //解析方法信息

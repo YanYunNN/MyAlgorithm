@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ThreadLocalTester {
     private static final AtomicInteger count = new AtomicInteger(0);
 
-    private static ThreadLocal<Integer> localValue = new ThreadLocal<Integer>() {
+    private static final ThreadLocal<Integer> localValue = new ThreadLocal<Integer>() {
 
     };
 
@@ -55,7 +55,7 @@ public class ThreadLocalTester {
          */
         @Override
         public void run() {
-            System.out.println(Thread.currentThread().getName() + ": " + threadLocalTester.get());
+            System.out.println(Thread.currentThread().getName() + ": " + get());
         }
     }
 }

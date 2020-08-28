@@ -16,7 +16,7 @@ public class ThreadPoolDemo {
                 1000,
                 TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<>(100),
-                (ThreadFactory) r -> new Thread(),
+                r -> new Thread(),
                 new ThreadPoolExecutor.DiscardOldestPolicy()
         );
         executor.execute(() -> new Task());

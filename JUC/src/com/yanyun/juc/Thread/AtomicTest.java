@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class AtomicTest {
 
-    private AtomicInteger inc = new AtomicInteger();
+    private final AtomicInteger inc = new AtomicInteger();
 
     public void increase() {
         inc.getAndIncrement();

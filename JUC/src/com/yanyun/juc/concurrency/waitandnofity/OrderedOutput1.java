@@ -53,13 +53,13 @@ public class OrderedOutput1 {
 
     private static class Info extends Thread {
         //当前的对象锁
-        private Semaphore current;
+        private final Semaphore current;
 
         //下一个对象锁
-        private Semaphore next;
+        private final Semaphore next;
 
         //要输出的值
-        private String value;
+        private final String value;
 
         public Info(Semaphore current, Semaphore next, String value) {
             this.current = current;

@@ -12,8 +12,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Created by sunyiwei on 2016/12/8.
  */
 public class McsLock implements Operator {
-    private ThreadLocal<Node> current = new ThreadLocal<>();
-    private AtomicReference<Node> lock = new AtomicReference<>();
+    private final ThreadLocal<Node> current = new ThreadLocal<>();
+    private final AtomicReference<Node> lock = new AtomicReference<>();
 
     public static void main(String[] args) {
         McsLock mcsLock = new McsLock();

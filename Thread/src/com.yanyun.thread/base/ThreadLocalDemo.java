@@ -8,7 +8,7 @@ package com.yanyun.thread.base;
  */
 public class ThreadLocalDemo {
     static class ThreadA implements Runnable {
-        private ThreadLocal<String> threadLocal;
+        private final ThreadLocal<String> threadLocal;
 
         public ThreadA(ThreadLocal<String> threadLocal) {
             this.threadLocal = threadLocal;
@@ -26,7 +26,7 @@ public class ThreadLocalDemo {
         }
 
         static class ThreadB implements Runnable {
-            private ThreadLocal<String> threadLocal;
+            private final ThreadLocal<String> threadLocal;
 
             public ThreadB(ThreadLocal<String> threadLocal) {
                 this.threadLocal = threadLocal;

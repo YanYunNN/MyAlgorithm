@@ -11,9 +11,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by sunyiwei on 2016/12/6.
  */
 public class TicketLock implements Operator {
-    private AtomicInteger serviceNum = new AtomicInteger();
-    private AtomicInteger currentNum = new AtomicInteger();
-    private ThreadLocal<Integer> ticketNum = new ThreadLocal<>();
+    private final AtomicInteger serviceNum = new AtomicInteger();
+    private final AtomicInteger currentNum = new AtomicInteger();
+    private final ThreadLocal<Integer> ticketNum = new ThreadLocal<>();
 
     public static void main(String[] args) {
         TicketLock ticketLock = new TicketLock();

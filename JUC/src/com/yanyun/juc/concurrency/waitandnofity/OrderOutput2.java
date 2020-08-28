@@ -31,7 +31,7 @@ public class OrderOutput2 {
         private final Lock lock;
         private final Condition current;
         private final Condition next;
-        private String value;
+        private final String value;
 
         public CustomThread(Lock lock, Condition current, Condition next, String value) {
             this.lock = lock;

@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
  * Created by sunyiwei on 2016/7/29.
  */
 public class Barrier extends SyncPrimitive {
-    private String name;
+    private final String name;
 
     public Barrier(String path, String name, String address) {
         super(address, path);
@@ -31,7 +31,7 @@ public class Barrier extends SyncPrimitive {
         ExecutorService executorService = Executors.newFixedThreadPool(COUNT);
         for (int i = 1; i <= COUNT; i++) {
             final int index = i;
-            executorService.submit((Runnable) () -> {
+            executorService.submit(() -> {
                 try {
                     Barrier barrier = new Barrier("/barrier", "/barrier/node" + index, "localhost:2181");
                     barrier.enter(enterCountDown);

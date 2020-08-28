@@ -13,11 +13,11 @@ import java.io.IOException;
  * Created by sunyiwei on 2016/7/21.
  */
 public class SimpleWatchClient implements Watcher, Runnable, DataMonitorListener {
-    private DataMonitor dataMonitor;
-    private String path;
+    private final DataMonitor dataMonitor;
+    private final String path;
     private ZooKeeper zooKeeper;
-    private String host;
-    private int port;
+    private final String host;
+    private final int port;
 
     public SimpleWatchClient(String path, String host, int port) {
         this.path = path;

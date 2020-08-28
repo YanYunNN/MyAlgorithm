@@ -14,11 +14,7 @@ public class Stack<T> {
 
     // 非空判断函数
     public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return size == 0;
     }
 
     public int size() {
