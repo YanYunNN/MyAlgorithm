@@ -15,7 +15,7 @@ public class ObjectLock {
         public void run() {
             synchronized (lock) {
                 for (int i = 0; i < 100; i++) {
-                    System.out.println("Thread A " + i);
+                    System.out.println("Thread ForkJoinTest " + i);
                 }
             }
         }

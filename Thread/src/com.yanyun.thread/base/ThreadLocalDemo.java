@@ -16,7 +16,7 @@ public class ThreadLocalDemo {
 
         @Override
         public void run() {
-            threadLocal.set("A");
+            threadLocal.set("ForkJoinTest");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
