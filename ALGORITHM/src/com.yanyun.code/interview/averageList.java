@@ -10,7 +10,7 @@ import java.util.List;
  * @Version: 1.0
  */
 public class averageList<T> {
-    public static void main(String[] args) {
+    public static void main(StringTest[] args) {
         ArrayList<String> list = new ArrayList<>();
         list.add("1");
         list.add("2");

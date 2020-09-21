@@ -11,7 +11,7 @@ import java.util.LinkedList;
 public class sortInsert {
     static LinkedList<Integer> list = new LinkedList<>();
 
-    public static void main(String[] args) {
+    public static void main(StringTest[] args) {
         addList(3);
         addList(1);
         addList(2);
