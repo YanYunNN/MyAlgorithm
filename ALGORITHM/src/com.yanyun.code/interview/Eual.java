@@ -17,6 +17,12 @@ import java.util.Objects;
 public class Eual {
     private String str;
     private final static String name = "name";
+    private static int i = 0;
+
+    static {
+        i = 999;
+        System.out.println(i);
+    }
 
     public static void main(String[] args) throws Exception {
         int a = 1;
