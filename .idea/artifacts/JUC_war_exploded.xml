@@ -32,6 +32,7 @@
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.62" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.5" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest:2.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.3.1.RELEASE" />
@@ -41,6 +42,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: redis.clients:jedis:2.8.0" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.7.0" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test:2.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:2.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
