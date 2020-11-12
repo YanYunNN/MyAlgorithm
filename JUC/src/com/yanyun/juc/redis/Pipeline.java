@@ -110,7 +110,7 @@ public class Pipeline {
 
         Random r = new Random();
         for (int i = 0; i < length; i++) {
-            sb.append((char)('a' + r.nextInt(26)));
+            sb.append((char) ('a' + r.nextInt(26)));
         }
 
         return sb.toString();

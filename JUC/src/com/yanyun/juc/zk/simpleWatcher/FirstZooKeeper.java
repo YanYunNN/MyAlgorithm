@@ -69,7 +69,7 @@ public class FirstZooKeeper {
         th.join();
     }
 
-    private static void testWatchEvent(ZooKeeper zooKeeper){
+    private static void testWatchEvent(ZooKeeper zooKeeper) {
         try {
             testGetChildrenEvent(zooKeeper);
 
@@ -89,7 +89,7 @@ public class FirstZooKeeper {
         LOGGER.error("{} created!", path);
 
         //create child
-        List<String> children = zooKeeper.getChildren(path,watcher);
+        List<String> children = zooKeeper.getChildren(path, watcher);
         String subPath = zooKeeper.create(subPath(path), randomStr(5).getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
 
         //set child data
@@ -106,14 +106,14 @@ public class FirstZooKeeper {
 
         //delete node
         children = zooKeeper.getChildren(path, watcher);
-        zooKeeper.delete(path,1);
+        zooKeeper.delete(path, 1);
     }
 
-    private static String subPath(String path){
+    private static String subPath(String path) {
         return path + randomStr(5);
     }
 
-    private static class CustomWatcher implements Watcher{
+    private static class CustomWatcher implements Watcher {
         @Override
         public void process(WatchedEvent watchedEvent) {
             LOGGER.error("{}节点发生了{}事件.", watchedEvent.getPath(), parseType(watchedEvent.getType()));
@@ -133,20 +133,20 @@ public class FirstZooKeeper {
         String subPath = zooKeeper.create(subPath(path), randomStr(5).getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
 
         //set child data
-        children = zooKeeper.exists(path,watcher);
+        children = zooKeeper.exists(path, watcher);
         zooKeeper.setData(subPath, randomStr(8).getBytes(), 0);
 
         //delete child
-        children = zooKeeper.exists(path,watcher);
+        children = zooKeeper.exists(path, watcher);
         zooKeeper.delete(subPath, 1);
 
         //set data
-        children = zooKeeper.exists(path,watcher);
+        children = zooKeeper.exists(path, watcher);
         zooKeeper.setData(path, randomStr(8).getBytes(), 0);
 
         //delete node
-        children = zooKeeper.exists(path,watcher);
-        zooKeeper.delete(path,1);
+        children = zooKeeper.exists(path, watcher);
+        zooKeeper.delete(path, 1);
     }
 
     private static void testGetDataEvent(ZooKeeper zooKeeper) throws KeeperException, InterruptedException {
@@ -175,7 +175,7 @@ public class FirstZooKeeper {
 
         //delete node
         children = zooKeeper.getData(path, watcher, stat);
-        zooKeeper.delete(path,1);
+        zooKeeper.delete(path, 1);
     }
 
     private static String parseType(Watcher.Event.EventType eventType) {

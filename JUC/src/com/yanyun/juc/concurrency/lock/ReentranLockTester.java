@@ -4,9 +4,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 测试可重入锁是否为自旋锁
- *
+ * <p>
  * 验证结果为: 不是
- *
+ * <p>
  * Created by sunyiwei on 2016/12/6.
  */
 public class ReentranLockTester {
@@ -20,7 +20,7 @@ public class ReentranLockTester {
         }
     }
 
-    private static class CustomThread extends  Thread{
+    private static class CustomThread extends Thread {
         private final java.util.concurrent.locks.Lock lock;
 
         public CustomThread(java.util.concurrent.locks.Lock lock) {
@@ -29,7 +29,7 @@ public class ReentranLockTester {
 
         @Override
         public void run() {
-            while(true){
+            while (true) {
                 lock.lock();
 
                 System.out.println(Thread.currentThread());

@@ -2,11 +2,11 @@ package com.yanyun.juc.concurrency;
 
 /**
  * 测试线程的sleep方法
- *
+ * <p>
  * 1. sleep()方法不需要在持有锁的情况下调用
- *
+ * <p>
  * 2. 调用sleep()方法后,线程不会释放已经持有的锁
- *
+ * <p>
  * Created by sunyiwei on 2017/4/27.
  */
 public class SleepTester {
@@ -16,7 +16,7 @@ public class SleepTester {
         new SleepyThread(obj).start();
     }
 
-    private static class SleepyThread extends  Thread{
+    private static class SleepyThread extends Thread {
         private final Object obj;
 
         public SleepyThread(Object obj) {
@@ -25,7 +25,7 @@ public class SleepTester {
 
         @Override
         public void run() {
-            synchronized (obj){
+            synchronized (obj) {
                 try {
                     Thread ct = Thread.currentThread();
                     sleep(1000);

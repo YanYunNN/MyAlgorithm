@@ -2,7 +2,7 @@ package com.yanyun.juc.concurrency.lock;
 
 /**
  * LOCK操作接口
- *
+ * <p>
  * Created by sunyiwei on 2016/12/6.
  */
 public interface Operator {

@@ -19,6 +19,7 @@ public class SynchronizedFairnessTester {
 
         ExecutorService executorService = Executors.newFixedThreadPool(COUNT, new ThreadFactory() {
             private int index = 0;
+
             @Override
             public Thread newThread(Runnable r) {
                 return new Thread(r, "Thread_" + index++);

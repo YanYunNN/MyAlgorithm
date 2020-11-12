@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * ConcurrentHashMap的测试类,测试它的transfer方法的实现
- *
+ * <p>
  * Created by sunyiwei on 2017/4/26.
  */
 public class ChmTester {
@@ -25,7 +25,7 @@ public class ChmTester {
         System.out.println(map.get("a_0"));
     }
 
-    private static void print(int value){
+    private static void print(int value) {
         System.out.println(Integer.toBinaryString(value));
     }
 }

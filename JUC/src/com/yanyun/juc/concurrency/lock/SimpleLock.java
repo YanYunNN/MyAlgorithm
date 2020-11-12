@@ -4,11 +4,11 @@ import java.util.Random;
 
 /**
  * 自己实现的读写锁
- *
+ * <p>
  * 1. 可重入: 读锁可重入,写锁可重入, 锁升级或者降级暂时不考虑
- *
+ * <p>
  * 2. 写锁等待优先处理: 即当有线程在请求写锁时,读锁请求无法进来
- *
+ * <p>
  * Created by sunyiwei on 2016/12/5.
  */
 public class SimpleLock {

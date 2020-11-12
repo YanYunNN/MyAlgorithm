@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * 线程间顺序输出
- *
+ * <p>
  * Created by sunyiwei on 2016/12/6.
  */
 public class OrderedOutput1 {

@@ -2,7 +2,7 @@ package com.yanyun.juc.Thread.waitandnofity;
 
 /**
  * 学习Java的等待通知机制
- *
+ * <p>
  * Created by sunyiwei on 2016/12/5.
  */
 public class WaitAndNotify {

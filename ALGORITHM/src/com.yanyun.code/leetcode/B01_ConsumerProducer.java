@@ -36,7 +36,9 @@ public class B01_ConsumerProducer {
                 Thread.sleep(1000);
                 lock.lock();
                 try {
-                    while (count == MAX_SIZE) { full.await(); }
+                    while (count == MAX_SIZE) {
+                        full.await();
+                    }
                     count++;
                     System.out.println("我是生产者线程：" + Thread.currentThread().getName() + " 剩余产品数量：" + count);
                     full.signal();
@@ -55,7 +57,9 @@ public class B01_ConsumerProducer {
                 Thread.sleep(1000);
                 lock.lock();
                 try {
-                    while (count == 0) { empty.await(); }
+                    while (count == 0) {
+                        empty.await();
+                    }
                     count--;
                     System.out.println("我是消费者线程：" + Thread.currentThread().getName() + " 剩余产品数量：" + count);
                     empty.signal();

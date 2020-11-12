@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * 测试共享锁的实现机制
- *
+ * <p>
  * Created by sunyiwei on 2016/12/14.
  */
 public class SharedLockTester {

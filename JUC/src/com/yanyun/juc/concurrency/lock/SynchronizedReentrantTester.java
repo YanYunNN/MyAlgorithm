@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 测试synchronized关键字的重入性
- *
+ * <p>
  * Created by sunyiwei on 2016/12/14.
  */
 public class SynchronizedReentrantTester {

@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 
 /**
  * 测试动态加载机制
- *
+ * <p>
  * Created by sunyiwei on 2016/11/8.
  */
 public class DynamicLoading {

@@ -10,10 +10,10 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 测试多线程使用单个jedis实例看不会看出现broken pipe的情况
- *
+ * <p>
  * 测试结果: 出现了大量的broken pipe错误
  * 测试结论: jedis实例不是线程安全的(thread-safe)
- *
+ * <p>
  * Created by sunyiwei on 16/5/26.
  */
 public class MultiThread {

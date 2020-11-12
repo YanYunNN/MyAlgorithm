@@ -17,8 +17,8 @@ public class ExceedMaximum {
         System.out.println(Integer.toBinaryString(Integer.MAX_VALUE * 2));
         System.out.println(Integer.toBinaryString(Integer.MAX_VALUE << 1));
 
-        System.out.println(Integer.parseInt("1111111111111111111111111111110",2));
-        System.out.println(Integer.parseInt("111111111111111111111111111110",2));
-        System.out.println(Integer.parseInt("111111111111111111111111111111",2));
+        System.out.println(Integer.parseInt("1111111111111111111111111111110", 2));
+        System.out.println(Integer.parseInt("111111111111111111111111111110", 2));
+        System.out.println(Integer.parseInt("111111111111111111111111111111", 2));
     }
 }

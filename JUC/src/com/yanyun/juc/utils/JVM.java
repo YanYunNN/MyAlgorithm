@@ -6,7 +6,7 @@ package com.yanyun.juc.utils;
 public class JVM {
     private int m;
 
-    public void incr(){
+    public void incr() {
         m++;
     }
 }

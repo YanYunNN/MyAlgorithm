@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 使用nofity和wait实现运动员跑步
- *
+ * <p>
  * Created by sunyiwei on 2016/12/5.
  */
 public class Athelete {

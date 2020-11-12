@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 测试ThreadLocal
- *
+ * <p>
  * Created by sunyiwei on 2017/4/25.
  */
 public class ThreadLocalTester {
@@ -48,7 +48,6 @@ public class ThreadLocalTester {
          * that <code>Runnable</code> object's <code>run</code> method is called; otherwise, this
          * method does nothing and returns. <p> Subclasses of <code>Thread</code> should override
          * this method.
-         *
          * @see #start()
          * @see #stop()
          * @see #Thread(ThreadGroup, Runnable, String)

@@ -4,9 +4,9 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * 使用countDownLatch测试共享锁的实现
- *
+ * <p>
  * 对于cdl对象来讲,countDown操作是释放共享锁,而await操作是获取共享锁,共享锁只会在全部的共享锁被释放了之后才能获取到
- *
+ * <p>
  * Created by sunyiwei on 2016/12/12.
  */
 public class CountDownLatchTester {

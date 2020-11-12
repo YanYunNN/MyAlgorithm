@@ -7,7 +7,7 @@ import java.util.Random;
 
 /**
  * collection接口的测试
- *
+ * <p>
  * Created by sunyiwei on 2016/12/19.
  */
 public class CollectionTester {

@@ -19,7 +19,7 @@
       <module name="algorithm" target="1.8" />
       <module name="Distribute" target="1.8" />
       <module name="JUC" target="1.8" />
-      <module name="SwordToOffer" target="1.5" />
+      <module name="SwordToOffer" target="7" />
       <module name="Thread" target="1.8" />
     </bytecodeTargetLevel>
   </component>

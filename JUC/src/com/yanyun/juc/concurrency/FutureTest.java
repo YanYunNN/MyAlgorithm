@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 
 /**
  * Future类的测试
- *
+ * <p>
  * Created by sunyiwei on 2017/4/28.
  */
 public class FutureTest {
@@ -28,7 +28,7 @@ public class FutureTest {
         }
 
         Iterator<Future<String>> it = fs.iterator();
-        while(it.hasNext()){
+        while (it.hasNext()) {
             Future<String> f = it.next();
             System.out.println(f.get());
         }
