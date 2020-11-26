@@ -36,7 +36,7 @@ public class _015_ReverseList {
      */
     public static void main(String[] args) {
         _015_ReverseList clazz = new _015_ReverseList();
-        ListNode listNode = clazz.ReverseList(head);
+        ListNode listNode = clazz.ReverseList0(head);
         System.out.println(listNode);
     }
 
