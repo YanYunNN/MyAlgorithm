@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Distribute" />
+          <element id="module-output" name="yanyun-distribute" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.7.RELEASE" />
@@ -44,9 +44,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Distribute/target/distribute-0.0.1/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/yanyun-distribute/target/distribute-0.0.1/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="Distribute/web/Web" />
+      <element id="javaee-facet-resources" facet="yanyun-distribute/web/Web" />
     </root>
   </artifact>
 </component>

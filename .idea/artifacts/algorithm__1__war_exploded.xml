@@ -11,11 +11,11 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Distribute" />
+          <element id="module-output" name="yanyun-distribute" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Distribute/target/algorithm-0.0.1/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/yanyun-distribute/target/algorithm-0.0.1/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="algorithm (1)/web/Web" />
     </root>

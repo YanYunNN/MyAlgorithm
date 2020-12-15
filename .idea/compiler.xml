@@ -9,27 +9,35 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JUC" />
         <module name="SwordToOffer" />
-        <module name="Distribute" />
-        <module name="Thread" />
+        <module name="yanyun-distribute" />
+        <module name="yanyun-utils" />
         <module name="algorithm" />
+      </profile>
+      <profile name="Annotation profile for code.thread" enabled="true">
+        <sourceOutputDir name="../Thread/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../Thread/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yanyun-thread" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ALGORITHM" target="1.8" />
       <module name="algorithm" target="1.8" />
-      <module name="Distribute" target="1.8" />
       <module name="JUC" target="1.8" />
       <module name="SwordToOffer" target="7" />
-      <module name="Thread" target="1.8" />
+      <module name="yanyun-distribute" target="1.8" />
+      <module name="yanyun-thread" target="1.8" />
+      <module name="yanyun-utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ALGORITHM" options="-parameters" />
-      <module name="Distribute" options="-parameters" />
       <module name="JUC" options="-parameters" />
-      <module name="Thread" options="-parameters" />
       <module name="algorithm" options="-parameters" />
+      <module name="yanyun-distribute" options="-parameters" />
+      <module name="yanyun-thread" options="-parameters" />
+      <module name="yanyun-utils" options="-parameters" />
     </option>
   </component>
 </project>
