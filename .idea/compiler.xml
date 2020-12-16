@@ -24,7 +24,7 @@
       <module name="ALGORITHM" target="1.8" />
       <module name="algorithm" target="1.8" />
       <module name="JUC" target="1.8" />
-      <module name="SwordToOffer" target="7" />
+      <module name="SwordToOffer" target="8" />
       <module name="yanyun-distribute" target="1.8" />
       <module name="yanyun-thread" target="1.8" />
       <module name="yanyun-utils" target="1.8" />
