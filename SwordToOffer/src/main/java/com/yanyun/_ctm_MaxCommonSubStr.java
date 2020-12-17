@@ -1,14 +1,12 @@
 package com.yanyun;
 
-import java.util.Scanner;
-
 /**
  * @author xcai
  * @version 1.0
  * @date 2020/12/16/18:59
- * @description
+ * @description https://blog.csdn.net/sinat_41917109/article/details/88774023
  */
-public class _custom_MaxCommonSubStr {
+public class _ctm_MaxCommonSubStr {
 
     //楼主这方面很容易理解，有了最大长度，子串也方便得到了
     public static void main(String[] args) {
