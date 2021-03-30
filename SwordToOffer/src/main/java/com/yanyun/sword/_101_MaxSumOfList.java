@@ -9,6 +9,9 @@ package com.yanyun.sword;
  * 最大连续子数组的和为5+2-1+2=8。
  */
 public class _101_MaxSumOfList {
+    //ar[2, 4, -7, 5, 2, -1, 2, -4, 3]
+    //dp[2, 6, -1, 5, 7,  6, 8,  4, 7]
+    //mx[2, 6,  6, 6, 7,  7, 8,  8, 8]
     public static int maxSubArray(int[] nums) {
         // 创建dp；初始化
         int[] dp = new int[nums.length];
@@ -23,7 +26,6 @@ public class _101_MaxSumOfList {
 
             max = Math.max(max, dp[i]);
         }
-
         return max;
     }
 
@@ -78,7 +80,7 @@ public class _101_MaxSumOfList {
     public static void main(String[] args) {
         int[] arr = {2, 4, -7, 5, 2, -1, 2, -4, 3};
         System.out.println(arr);
-//        maxSubArray(arr);
+        maxSubArray(arr);
         maxSubList(arr);
         int maxSubSum = maxSubSum(arr);
         System.out.println(maxSubSum);
