@@ -1,5 +1,6 @@
 package com.yanyun.sword.juc.concurrency.lock;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -12,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentranLockTester {
     public static void main(String[] args) {
         ReentrantLock reentrantLock = new ReentrantLock();
-
+        Condition condition = reentrantLock.newCondition();
         final int COUNT = 100;
         for (int i = 0; i < COUNT; i++) {
             Thread t1 = new CustomThread(reentrantLock);

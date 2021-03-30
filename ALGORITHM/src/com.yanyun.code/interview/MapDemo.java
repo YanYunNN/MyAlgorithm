@@ -1,6 +1,7 @@
 package com.yanyun.code.interview;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author xcai
@@ -83,6 +84,10 @@ public class MapDemo {
         Set<Object> objects = initMap.keySet();
         Collection<Object> values = initMap.values();
         initMap.size();
+        ArrayDeque<String> deque = new ArrayDeque();
+        PriorityQueue priorityQueue = new PriorityQueue();
+        Objects.hash();
+        LinkedHashMap<Object, Object> objectObjectLinkedHashMap = new LinkedHashMap<>();
     }
 
 }

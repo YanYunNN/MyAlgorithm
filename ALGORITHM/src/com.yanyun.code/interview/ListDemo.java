@@ -1,5 +1,9 @@
 package com.yanyun.code.interview;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.util.StopWatch;
+
 import java.util.*;
 
 /**
@@ -21,9 +25,10 @@ public class ListDemo {
      * 方法加上了sychronized，线程安全，效率很低
      */
     List<Object> objectVector = new Vector<>();
-
     /**
      * @see java.util.ArrayList;
+     * @see java.util.LinkedList;
+     * @see java.util.LinkedHashMap;
      * class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess
      * 线程不安全
      * transient Object[] elementData;//list真正的构造
@@ -64,6 +69,30 @@ public class ListDemo {
     public static void main(String[] args) {
         List<Object> objectList = new ArrayList<>();
         objectList.add("1");
+//        Collections.synchronizedList();
+        List<Object> objects = Collections.synchronizedList(objectList);
+        Integer a1 = 128;
+        Integer a2 = -128;
+        Integer a3 = -128;
+        Integer a4 = 128;
+        System.out.println(a1 == a4);
+        System.out.println(a2 == a3);
+        int aa1 = 128;
+        int aa2 = -128;
+        int aa3 = -128;
+        int aa4 = 128;
+        System.out.println(aa1 == aa4);
+        System.out.println(aa2 == aa3);
+        Runtime runtime = Runtime.getRuntime();
+        Integer.valueOf(1);
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        Object someBean = (Object) context.getBean("someBean");
+        someBean.hashCode();
+//        Resource
+        StopWatch watch=new StopWatch();
+        watch.start();
+        watch.stop();
+        watch.prettyPrint();
     }
 
 }

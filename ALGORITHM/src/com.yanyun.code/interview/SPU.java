@@ -20,7 +20,7 @@ public class SPU {
     /**
      * -----------------------------------------------init--------------------------------------------------------------
      */
-    private static SPU spu = new SPU();
+    private final static SPU spu = new SPU();
     private static List<String> addList = new ArrayList<>();
 
     static {
