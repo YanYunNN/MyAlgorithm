@@ -55,7 +55,7 @@ public class _012_Power {
             return base;
         }
         double subResult = absPower(base, exponent / 2);
-        return exponent % 2 == 0 ? subResult * subResult * base : subResult * subResult;
+        return exponent % 2 != 0 ? subResult * subResult * base : subResult * subResult;
     }
 
     /**
@@ -63,7 +63,7 @@ public class _012_Power {
      */
     public static void main(String[] args) {
         _012_Power clazz = new _012_Power();
-        System.out.println(clazz.Power(2, 1));
+        System.out.println(clazz.Power2(2, 7));
     }
 }
 

@@ -2,10 +2,12 @@ package com.yanyun.sword;
 
 public class _015_ReverseList {
     /**
-     * 输入一个链表，输出该链表中倒数第k个结点。
+     * 反转链表
      * --------------------------------------------------SOLUTION-------------------------------------------------------
      * <p>
-     * 暴力顺着数
+     * 三人行
+     * pre  cur  next
+     * A -> B -> C
      */
     public ListNode ReverseList0(ListNode head) {
         if (head == null) return null;
@@ -21,7 +23,7 @@ public class _015_ReverseList {
     }
 
     /**
-     * 暴力顺着数
+     * 递归
      */
     public ListNode ReverseList(ListNode head) {
         if (head == null || head.next == null) return head;
