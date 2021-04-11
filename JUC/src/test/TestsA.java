@@ -1,7 +1,7 @@
 package test;
 
-import org.junit.Test;
-
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -11,13 +11,8 @@ public class TestsA extends AbstractQueuedSynchronizer {
     private static final Lock lock = new ReentrantLock();
 
     @Override
-    protected boolean tryAcquire(int arg) {
-        return super.tryAcquire(arg);
-    }
-
-    @Override
-    protected boolean tryRelease(int arg) {
-        return super.tryRelease(arg);
+    protected boolean isHeldExclusively() {
+        return super.isHeldExclusively();
     }
 
     public static void func() {
@@ -28,5 +23,12 @@ public class TestsA extends AbstractQueuedSynchronizer {
             lock.unlock();
             System.out.println(Thread.currentThread().getName() + "解锁");
         }
+    }
+
+    public static void main(String[] args) {
+        Integer[] integer = new Integer[] { 1, 2, 3, 4 };
+        List integetList = Arrays.asList(integer);
+        integetList.set(1,9);
+        StringBuilder builder=new StringBuilder();
     }
 }

@@ -1,5 +1,7 @@
 package com.yanyun.spring;
 
+import java.util.HashMap;
+
 /**
  * @author xcai
  * @version 1.0
