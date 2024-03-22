@@ -36,7 +36,7 @@
       <module name="algorithm" options="-parameters" />
       <module name="distribute" options="-parameters" />
       <module name="juc" options="-parameters" />
-      <module name="labuladong" options="-parameters" />
+      <module name="labuladong" options="" />
       <module name="labuladong (1)" options="" />
       <module name="leetcode" options="" />
       <module name="yanyun-distribute" options="-parameters" />
