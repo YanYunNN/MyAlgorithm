@@ -14,7 +14,7 @@ public class Q146_LRUCache {
         }
 
         public int get(int key) {
-            if (cache.containsKey(key)) {
+            if (!cache.containsKey(key)) {
                 return -1;
             }
             this.moveToHead(key);

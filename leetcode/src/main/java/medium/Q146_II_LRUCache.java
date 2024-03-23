@@ -64,7 +64,7 @@ public class Q146_II_LRUCache {
 
         public void put(int key, int value) {
             Node node = cache.get(key);
-            if (node != null) {
+            if (cache != null) {
                 node.value = value;
                 moveToHead(node);
                 return;
