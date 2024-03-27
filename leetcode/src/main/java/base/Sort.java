@@ -42,7 +42,14 @@ public class Sort {
         System.out.println("排完序的序列：" + Arrays.toString(nums));
     }
 
-    class QuickSort {
+    public static void main(String[] args) {
+        QuickSort quickSort = new QuickSort();
+        int[] arr = {8, 3, 5, 7, 2, 6, 4};
+        quickSort.partition3(arr, 0, arr.length - 1);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static class QuickSort {
         /**
          * 快速排序，挖坑法
          */
@@ -129,6 +136,22 @@ public class Sort {
             partition2(arr, left, i - 1);
             // 递归处理右半数组
             partition2(arr, i + 1, right);
+        }
+
+        public void partition3(int[] arr, int left, int right) {
+            if (left == right) return;
+            int i = left - 1, j = right + 1, pivot = arr[left + right >> 1];
+            while (i < j) {
+                while (arr[++i] < pivot) ;
+                while (arr[--j] > pivot) ;
+                if (i < j) {
+                    int tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+            partition3(arr, left, j);
+            partition3(arr, j + 1, right);
         }
     }
 

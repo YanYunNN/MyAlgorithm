@@ -34,10 +34,8 @@ public class Q215_findKthLargest {
                 return nums[k];
             int pivot = nums[l], i = l - 1, j = r + 1; // 这里注意需要左右移1
             while (i < j) {
-                while (nums[++i] < pivot)
-                    ;
-                while (nums[--j] > pivot)
-                    ;
+                while (nums[++i] < pivot) ;
+                while (nums[--j] > pivot) ;
                 if (i < j) {
                     int tmp = nums[i];
                     nums[i] = nums[j];
