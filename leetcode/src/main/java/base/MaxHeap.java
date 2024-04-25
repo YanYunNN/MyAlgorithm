@@ -10,8 +10,6 @@ public class MaxHeap {
         return -1;
     }
 
-    ;
-
     //对 nums[low...high] 进行筛选，使得以 nums[low] 为根节点的左子树和右子树均为大根堆
     public void sift(int[] nums, int low, int high) {
         // nums[j] 是 nums[i] 的左孩子
