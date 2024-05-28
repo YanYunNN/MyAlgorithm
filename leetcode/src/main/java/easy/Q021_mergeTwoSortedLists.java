@@ -7,7 +7,7 @@ import base.ListNode;
  * @date: 2024/05/13
  * @see <a href='https://leetcode.cn/problems/merge-two-sorted-lists/solutions/2361535/21-he-bing-liang-ge-you-xu-lian-biao-shu-aisw'>Conf<a/>
  */
-public class Q021_mergeTwoLists {
+public class Q021_mergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
         ListNode cur = dummy;
