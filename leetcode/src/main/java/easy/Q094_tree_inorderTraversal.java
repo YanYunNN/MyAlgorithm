@@ -32,14 +32,17 @@ public class Q094_tree_inorderTraversal {
             if (root == null) return null;
             List<Integer> res = new ArrayList<>();
             Stack<TreeNode> stack = new Stack<>();
-            while (root != null || !stack.isEmpty()) {
-                if (root.left != null) {  //左边不断入栈
-                    stack.push(root.left);
-                    root = root.left;
-                } else {
-                    TreeNode tmp = stack.pop();
-                    res.add(tmp.val);
-                    stack.push(tmp.right);
+
+            TreeNode cur = root;
+            while (!stack.isEmpty() || cur != null) {
+                while (cur != null) {
+                    stack.push(cur);
+                    cur = cur.left;
+                }
+                TreeNode node = stack.pop();
+                res.add(node.val);
+                if (node.right != null) { //如果有右节点，其也要进行中序遍历
+                    cur = node.right;
                 }
             }
             return res;
