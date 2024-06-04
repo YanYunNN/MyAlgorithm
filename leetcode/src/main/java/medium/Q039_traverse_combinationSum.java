@@ -40,4 +40,14 @@ public class Q039_traverse_combinationSum {
             trackSum += candidates[i];
         }
     }
+      /**
+     * backtrack(candidates, i, target)：在当前层级中，可以重复使用 candidates 中的元素。
+     * backtrack(candidates, i+1, target)：在当前层级中，不可以重复使用 candidates 中的元素，需要跳过已经使用过的元素。
+     * backtrack(candidates, start, target)：在整个递归树中，需要重复使用 candidates 中的元素，因此回到上一层时，需要从 start 开始继续循环。
+     *
+     * 具体来说：
+     * 在第一种调用方式中，i 代表当前层级循环的起点，可以重复使用 candidates 中的元素，因此从 i 开始循环。
+     * 在第二种调用方式中，i+1 代表当前层级循环的起点，不能重复使用 candidates 中的元素，因此从 i+1 开始循环。
+     * 在第三种调用方式中，start 代表整个递归树中循环的起点，需要重复使用 candidates 中的元素，因此从 start 开始循环。
+     * */
 }
