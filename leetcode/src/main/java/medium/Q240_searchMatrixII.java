@@ -6,7 +6,7 @@ package medium;
  * @tag 二分、z字抽象BST
  * @see <a href='https://leetcode.cn/problems/search-a-2d-matrix-ii/solutions/1065178/gong-shui-san-xie-yi-ti-shuang-jie-er-fe-y1ns/'>Conf<a/>
  */
-public class Q240_searchMatrix {
+public class Q240_searchMatrixII {
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         for (int i = 0; i < m; i++) {
