@@ -1,8 +1,6 @@
-package medium;
+package easy;
 
 import base.ListNode;
-
-import java.math.BigInteger;
 
 public class Q019_removeEndNthListNode {
 
@@ -20,5 +18,5 @@ public class Q019_removeEndNthListNode {
         slow.next = slow.next.next;
         return dummy.next;
     }
-   
+
 }

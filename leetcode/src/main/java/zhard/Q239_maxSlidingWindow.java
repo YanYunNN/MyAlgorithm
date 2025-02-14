@@ -22,13 +22,41 @@ import java.util.PriorityQueue;
  */
 public class Q239_maxSlidingWindow {
 
+    /**
+     * 利用双端队列手动实现单调队列
+     * 用一个单调队列来存储对应的下标，每当窗口滑动的时候，直接取队列的头部指针对应的值放入结果集即可
+     * 注意单调递减队列存放的是下标：
+     * 1. 始终保证队列的头部是当前窗口的最大值
+     * 2. 保证队列中的元素索引递增，方便地移除不属于当前窗口的元素
+     */
+    public int[] maxSlidingWindow0(int[] nums, int k) {
+        Deque<Integer> queue = new LinkedList<>();
+        if (nums == null || nums.length < k) return null;
+
+        int[] res = new int[nums.length + 1 - k];
+        int idx = 0;
+        for (int i = 0; i < nums.length; i++) {
+            // 1.队列头结点（左边）需要在[i - k + 1, i]范围内，不符合则要弹出
+            while (!queue.isEmpty() && queue.peek() < i - k + 1) {
+                queue.pollFirst();
+            }
+            // 2.既然是单调，就要保证每次放进去的数字要比末尾的都大，否则也弹出
+            while (!queue.isEmpty() && nums[queue.peekLast()] < nums[i]) {
+                queue.pollLast();
+            }
+            queue.offerLast(i);
+            if (i + 1 >= k) {
+                res[idx++] = nums[queue.peekFirst()];
+            }
+        }
+        return res;
+    }
+
     //大根堆
     public int[] maxSlidingWindow1(int[] nums, int k) {
         int n = nums.length;
-        //存储二元组 (num,index)
-        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> {
-            return o1[0] != o2[0] ? o2[0] - o1[0] : o2[1] - o1[1];//堆顶放大的值，值相同的把坐标大的放堆顶
-        });
+        //存储二元组 (num,index) //堆顶放大的值，值相同的把坐标大的放堆顶
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[0] != o2[0] ? o2[0] - o1[0] : o2[1] - o1[1]);
 
         int[] ans = new int[n - k + 1];
         int index = 0;

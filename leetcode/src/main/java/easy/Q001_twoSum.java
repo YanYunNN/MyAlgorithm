@@ -1,5 +1,6 @@
-package medium;
+package easy;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +29,22 @@ public class Q001_twoSum {
                 return new int[]{i, map.get(v)};
             }
             map.put(nums[i], i);
+        }
+        return new int[2];
+    }
+
+    public int[] twoSum2(int[] nums, int target) {
+        Arrays.sort(nums);
+        int l = 0, r = nums.length - 1;
+        while (l < r) {
+            int sum = nums[l] + nums[r];
+            if (sum == target) {
+                return new int[]{l, r};
+            } else if (sum < target) {
+                l++;
+            } else {
+                r--;
+            }
         }
         return new int[2];
     }

@@ -47,6 +47,25 @@ public class Q023_mergeKLists {
     }
 
     public class solution2 {
+
+        public ListNode mergeKLists1(ListNode[] lists) {
+            if (lists == null || lists.length == 0) return null;
+            PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt((ListNode o)  -> o.val).reversed());
+            ListNode dummy = new ListNode(0);
+            for (ListNode head : lists) {
+                if (head != null) queue.offer(head);
+            }
+            ListNode cur = dummy;
+            while (!queue.isEmpty()) {
+                ListNode root = queue.poll();
+                ListNode node = root.next;
+                if (node != null) queue.offer(node);
+                cur.next = root;
+                cur = cur.next;
+            }
+            return dummy.next;
+        }
+
         public ListNode mergeKLists(ListNode[] lists) {
             if (lists == null || lists.length == 0) return null;
             PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, Comparator.comparingInt(o -> o.val));//小根堆

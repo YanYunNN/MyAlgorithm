@@ -33,4 +33,13 @@ public class MaxHeap {
             }
         }
     }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 3, 2, 6, 5, 7, 8, 9, 10, 0};
+        MaxHeap maxHeap = new MaxHeap();
+        maxHeap.heapify(nums);
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+    }
 }
